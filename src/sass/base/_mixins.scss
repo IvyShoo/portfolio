@@ -1,0 +1,228 @@
+@use '../base/colors' as colors;
+@use '../base/media-queries' as mq;
+@use '../base/variables' as variable;
+
+
+
+// CENTERING ...........................................
+@mixin centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centeredX {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin centeredY {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+// TYPOGRAPHY ...........................................
+$font-main: "Roboto", serif;
+$font-accent: "Outfit", serif;
+
+@mixin titles {
+    color: colors.$text-light;
+    font-family: $font-accent;
+    font-style: normal;
+    text-transform: lowercase;
+    font-weight: 800;
+}
+        @mixin textTitle {
+            @include titles();
+            font-size: 3rem;
+            line-height: 3rem;
+
+            @include mq.mobSM {
+                font-size: 3.4rem;
+                line-height: 3.4rem;
+            }
+            @include mq.tabLG {
+                font-size: 4.5rem;
+                line-height: 4.5rem;
+            }
+            @include mq.deskMD {
+                font-size: 6rem;
+                line-height: 6rem;
+            }
+        }
+        @mixin textSubtitle {
+            @include titles();
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+
+            @include mq.tabLG {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            @include mq.deskLG {
+                font-size: 4.5rem;
+                line-height: 4.8rem;
+            }
+        }
+        @mixin textTitleFooter {
+            @include textSubtitle;
+            text-align: center;
+
+            @include mq.mobSM {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            @include mq.tabSM {
+                @include textTitle();
+                text-align: unset;
+            }
+            @include mq.deskLG {
+                @include textTitle();
+                line-height: 5.8rem;
+                text-align: unset;
+            }
+        }
+
+
+@mixin textBody {
+    color: colors.$text-light;
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 200;
+}
+        @mixin textNormal {
+            @include textBody();
+            font-size: 1rem;
+            line-height: 1.4rem;
+
+            @include mq.mobSM {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+            @include mq.tabLG {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+            @include mq.deskLG {
+                font-size: 2rem;
+                line-height: 2.8rem;
+            }
+        }
+        // about + mini projects:
+        @mixin textSM {
+            @include textBody();
+            font-size: 1rem;
+            line-height: 1.5rem;
+
+            @include mq.tabLG {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+            @include mq.deskLG {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+            }
+        }
+        // mini footer text:
+        @mixin textMini {
+            @include textBody();
+            color: colors.$text-light-hover;
+            letter-spacing: 0.5px;
+            font-size: 0.7rem;
+            line-height: 1rem;
+
+            @include mq.tabLG {
+                font-size: 0.8rem;
+                line-height: 1.1rem;
+            }
+            @include mq.deskLG {
+                font-size: 0.8rem;
+                line-height: 1.1rem;
+            }
+        }
+
+@mixin textBodyUpper {
+    color: colors.$text-light;
+    font-family: $font-main;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+}        
+        @mixin textUpper {
+            @include textBodyUpper();
+            font-size: 0.9rem;
+            line-height: 1rem;
+
+            @include mq.tabLG {
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+            }
+            @include mq.deskLG {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+        }
+        // about + mini projects:
+        @mixin textUpperSM {
+            @include textBodyUpper();
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+
+            @include mq.tabLG {
+                font-size: 0.9rem;
+                line-height: 1.2rem;
+            }
+            @include mq.deskLG {
+                font-size: 1rem;
+                line-height: 1.6rem;
+            }
+        }
+        @mixin textUpperMini {
+            @include textBodyUpper();
+            color: colors.$text-light-hover;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+
+            @include mq.tabLG {
+                font-size: 0.8rem;
+                line-height: 1.1rem;
+            }
+        }
+
+
+@mixin textButtons {
+    color: colors.$text-dark;
+    font-family: $font-main;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+   
+        .project-cta a button {
+            @include textButtons();
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+
+            @include mq.deskLG {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+            }
+        }
+                .project-mini a button,
+                #click-to-copy button {
+                    @include textButtons();
+                    font-size: 0.8rem;
+                    line-height: 0.8rem;
+
+                    @include mq.tabLG {
+                        font-size: 0.9rem;
+                        line-height: 1rem;
+                    }
+                }
+

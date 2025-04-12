@@ -1,0 +1,102 @@
+
+// SCREEN SIZES
+// phones: 360x800, 390x844, 393x873, 412x915, 375x812, 393x852
+// tablets: 768x1024, 810x1080, 820x1180, 800x1280, 1280x800
+// desktops: 1920x1080, 1366x768, 1536x864, 1280x720, 1440x900, 2560x1440
+
+        // Mobile XXS (portrait)
+        // 0 - 360px;
+
+        // Mobile XS (portrait) ..............
+        $screen-mob-xs: 375px;
+
+        // Mobile SM (portrait) ................
+        $screen-mob-sm: 412px;
+
+        // Mobile LG and Tablets SM (landscape)
+        $screen-mob-lg: 576px;
+
+        // Tablets SM (portrait) .....................
+        $screen-tab-sm: 768px;
+
+        // Tablets LG and Desktops XXS (landscape 1024x576, portrait 1024x1366) ..............................
+        $screen-tab-lg: 992px;
+
+        // Tablets XL and Desktops XS (landscape)
+        $screen-desk-xs: 1200px;
+
+        // Desktops SM
+        $screen-desk-sm: 1400px;
+
+        // Desktops MD (lg font, header, footer)
+        $screen-desk-md: 1600px;
+
+        // Desktops XL
+        $screen-desk-lg: 1920px;
+        
+        // Desktops XXL
+        $screen-desk-xl: 2560px;
+
+
+
+        
+// MEDIA QUERY BREAKPOINTS ..........................................................
+@mixin mobXS {
+    @media (min-width: $screen-mob-xs) {
+        @content;
+    }
+ }
+
+@mixin mobSM {
+    @media (min-width: $screen-mob-sm) {
+        @content;
+    }
+ }
+ 
+ @mixin mobLG {
+    @media (min-width: $screen-mob-lg) {
+        @content;
+    }
+ }
+ 
+ @mixin tabSM {
+    @media (min-width: $screen-tab-sm) {
+        @content;
+    }
+ }
+ 
+ @mixin tabLG {
+    @media (min-width: $screen-tab-lg) {
+        @content;
+    }
+ }
+
+ @mixin deskXS {
+    @media (min-width: $screen-desk-xs) {
+        @content;
+    }
+ }
+
+ @mixin deskSM {
+    @media (min-width: $screen-desk-sm) {
+        @content;
+    }
+ }
+
+ @mixin deskMD {
+    @media (min-width: $screen-desk-md) {
+        @content;
+    }
+ }
+
+ @mixin deskLG {
+    @media (min-width: $screen-desk-lg) {
+        @content;
+    }
+ }
+
+ @mixin deskXL {
+    @media (min-width: $screen-desk-xl) {
+        @content;
+    }
+ }

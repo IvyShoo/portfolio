@@ -1,0 +1,94 @@
+@use '../base/media-queries' as mq;
+
+
+
+// HEADER .................................................
+@keyframes mobile {
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(0deg);}
+    100% {transform: rotate(-5deg);}
+}
+
+@keyframes crown-mob {
+    0% {left: 22px; transform: rotate(0deg);}
+    20% {left: 22px; transform: rotate(0deg);}
+    90% {left: 28px; transform: rotate(15deg);}
+    100% {left: 20px; transform: rotate(0deg);}
+}
+        @keyframes crown-tab {
+            0% {left: 75px; transform: rotate(0deg);}
+            20% {left: 75px; transform: rotate(0deg);}
+            90% {left: 90px; transform: rotate(15deg);}
+            100% {left: 80px; transform: rotate(0deg);}
+        }
+        @keyframes crown-desk {
+            0% {left: 120px; transform: rotate(0deg);}
+            20% {left: 120px; transform: rotate(0deg);}
+            90% {left: 134px; transform: rotate(15deg);}
+            100% {left: 118px; transform: rotate(0deg);}
+        }
+
+@keyframes sunglasses-mob {
+    0% {width: 30px;}
+    50% {width: 50px;}
+    100% {width: 30px;}
+}
+        @keyframes sunglasses-desk {
+            0% {width: 70px;}
+            50% {width: 90px;}
+            100% {width: 70px;}
+        }
+
+@keyframes leaves-mob {
+    0% {top: 205px;}
+    50% {top: 202px;}
+    100% {top: 205px;}
+}
+        @keyframes leaves-tab {
+            0% {top: 280px;}
+            50% {top: 285px;}
+            100% {top: 280px;}
+        }
+        @keyframes leaves-desk {
+            0% {top: 280px;}
+            50% {top: 285px;}
+            100% {top: 280px;}
+        }
+
+
+
+
+
+// FOOTER .......................................................
+@keyframes wave {
+    0%,
+    15% {transform: rotateZ(-15deg);}
+    20% {transform: rotateZ(10deg);}
+    25% {transform: rotateZ(-10deg);}
+    30% {transform: rotateZ(6deg);}
+    35% {transform: rotateZ(-4deg);}
+    40%,
+    100% {transform: rotateZ(-15deg);}
+}
+
+@keyframes gum-mob {
+    0% {width: 0px; height: 0px;}
+    10% {width: 0px; height: 0px;}
+    15% {width: 0px; height: 0px;}
+    20% {width: 10px; height: 10px;}
+    30% {width: 5px; height: 5px;}
+    40% {width: 15px; height: 15px;}
+    100% {width: 30px; height: 30px;}
+}
+        @keyframes gum-desk {
+            0% {width: 0px; height: 0px;}
+            10% {width: 0px; height: 0px;}
+            15% {width: 0px; height: 0px;}
+            20% {width: 20px; height: 20px;}
+            30% {width: 10px; height: 10px;}
+            40% {width: 30px; height: 30px;}
+            100% {width: 60px; height: 60px;}
+        }
+
+
+        

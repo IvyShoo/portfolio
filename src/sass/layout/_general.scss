@@ -1,0 +1,48 @@
+@use '../base/colors' as colors;
+@use '../base/media-queries' as mq;
+@use '../base/mixins' as mixin;
+@use '../base/variables' as variable;
+
+
+body,
+html {
+    overflow-x: hidden;
+}
+  
+#background {
+    background: colors.$bg-main-mobile;
+    border-radius: 0 0 50px 50px;
+    position: relative;
+    z-index: 1;
+
+    @include mq.deskLG {
+        background: colors.$bg-main;
+        border-radius: 0 0 80px 80px;
+    }
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.indent {
+    margin-left: 100px;
+
+    @include mq.deskLG {
+        margin-left: 220px;
+    }
+}
+        .indent-md {
+            margin-left: 0px;
+
+            @include mq.tabSM {
+                margin-left: 80px;
+            }
+            @include mq.deskLG {
+                margin-left: 160px;
+            }
+        }
+
+
+
+

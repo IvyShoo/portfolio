@@ -1,0 +1,72 @@
+@use '../base/colors' as colors;
+@use '../base/media-queries' as mq;
+@use '../base/mixins' as mixin;
+
+
+
+::selection {
+    background: colors.$color-accent;
+    color: colors.$text-dark;
+}
+        ::-moz-selection {
+            background: colors.$color-accent;
+            color: colors.$text-dark;
+        }
+
+a {
+    text-decoration: none;
+}
+.navi-link a {
+    transition: color 0.4s;
+}
+        .navi-link:hover a {
+            color: colors.$text-light-hover;
+        }
+
+h1 {
+    @include mixin.textTitle;
+}
+        h2 {
+            @include mixin.textSubtitle;
+        }
+        .title-footer h1 {
+            @include mixin.textTitleFooter;
+        }
+
+.text {
+    @include mixin.textNormal;
+}
+        .text-sm {
+            @include mixin.textSM;
+        }
+        .text-mini {
+            @include mixin.textMini;
+        }
+
+.text-upper {
+    @include mixin.textUpper;
+}
+        .text-upper-sm {
+            @include mixin.textUpperSM;
+        }
+        .text-upper-mini {
+            @include mixin.textUpperMini;
+        }
+
+.project-title.text-upper-sm, 
+.project-text.text-sm {
+    text-align: center;
+}
+
+.assets a {
+    color: colors.$text-light-hover;
+}
+        .assets a:hover {
+            color: colors.$text-light;
+        }
+
+
+
+
+
+               

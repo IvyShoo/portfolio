@@ -1,0 +1,361 @@
+@use '../base/animations' as animation;
+@use '../base/colors' as colors;
+@use '../base/media-queries' as mq;
+@use '../base/mixins' as mixin;
+@use '../base/variables' as variable;
+
+
+
+footer {
+    min-height: 105svh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    background-color: colors.$bg-mono-dark-footer;
+
+    @include mq.deskLG {
+        min-height: 100svh;
+   }
+}
+
+.footer-content {
+    height: 100%;
+    min-height: 100svh;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+
+    @include mq.deskXL {
+        width: 60%;
+    }
+}
+    .title-footer,
+    .contact-info, 
+    .footer-guy, .gum,
+    .balloon {
+        position: absolute;
+    }
+
+            .title-footer {
+                width: 300px;
+                top: 20%;
+                z-index: 10;
+                @include mixin.centeredX;
+
+                @include mq.mobSM {
+                    top: 22%;
+                }
+                @include mq.tabSM {
+                    width: 400px;
+                    transform: unset;
+                    top: 24%;
+                }
+                @include mq.tabLG {
+                    width: 500px;
+                }
+                @include mq.deskXS {
+                    top: 15%;
+                    left: 60%;
+                }
+                @include mq.deskMD {
+                    left: 56%;
+                    width: 650px;
+                }
+                @include mq.deskLG {
+                    width: 720px;
+                    top: 13%;
+                }
+            }
+
+            .footer-guy {
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                background-color: #cbd900c2;
+                top: 35%;
+                left: 55%;
+                transform: translateX(-50%);
+
+                @include mq.mobSM {
+                    top: 38%;
+                }
+                @include mq.tabSM {
+                    width: 280px;
+                    height: 280px;
+                    top: 36%;
+                    left: 38%;
+                }
+                @include mq.tabLG {
+                    width: 380px;
+                    height: 380px;
+                }
+                @include mq.deskXS {
+                    top: 25%;
+                    left: 45%;
+                }
+                @include mq.deskSM {
+                    top: 28%;
+                    left: 48%;
+                }
+                @include mq.deskMD {
+                    top: 35%;
+                }
+                @include mq.deskLG {
+                    width: 420px;
+                    height: 420px;
+                    top: 30%;
+                }
+
+                img {
+                    position: absolute;
+                }
+            }
+                    .mobile-guy-wave img {
+                        width: 30px;
+                        top: 30px;
+                        left: -40px;
+                        animation: wave 2s ease-in-out infinite alternate;
+
+                        @include mq.tabSM {
+                            width: 50px;
+                            top: 42px;
+                            left: -50px;
+                        }
+                        @include mq.tabLG {
+                            width: 60px;
+                            top: 70px;
+                            left: -50px;
+                        }
+                        @include mq.deskLG {
+                            width: 70px;
+                            top: 55px;
+                            left: -90px;
+                        }
+                    }
+                    .mobile-guy-static img {
+                        width: 240px;
+                        top: -30px;
+                        left: -48px;
+                        transform: rotate(-10deg);
+
+                        @include mq.tabSM {
+                            width: 375px;
+                            top: -48px;
+                            left: -68px;
+                        }
+                        @include mq.tabLG {
+                            width: 500px;
+                            top: -60px;
+                            left: -90px;
+                        }
+                        @include mq.deskLG {
+                            width: 600px;
+                            top: -95px;
+                            left: -127px;
+                        }
+                    }
+                    .gum {
+                        width: 30px;
+                        height: 30px;
+                        top: 28%;
+                        left: 26.5%;
+                        transform: rotate(105deg);
+
+                        @include mq.tabSM {
+                            top: 29%;
+                            left: 37%;
+                        }
+                        @include mq.tabLG {
+                            top: 30%;
+                            left: 39%;
+                        }
+                        @include mq.deskLG {
+                            width: 60px;
+                            height: 60px;
+                            top: 26%;
+                            left: 32%;
+                        }
+                    }
+                            .gum-ball {
+                                @extend .gum;
+                                top: 0;
+                                left: 0;
+                                border-radius: 50%;
+                                background-color: #e0ef04b8;
+                                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.247);
+                                animation: gum-mob 4s ease-in-out infinite;
+
+                                @include mq.deskLG {
+                                    animation: gum-desk 4s ease-in-out infinite;
+                                }
+                            }
+
+            .contact-info {
+                top: 73%;
+
+                @include mq.mobSM {
+                    top: 78%;
+                }
+                @include mq.tabSM {
+                    top: 80%;
+                    width: 400px;
+                    @include mixin.centeredX;
+                }
+                @include mq.tabLG {
+                    top: 82%;
+                    width: 550px;
+                    left: unset;
+                    transform: unset;
+                }
+                @include mq.deskXS {
+                    top: 69%;
+                }
+                @include mq.deskSM {
+                    top: 74%;
+                }
+                @include mq.deskLG {
+                    top: 70%;
+                }
+            }
+                    .links {
+                        position: relative;
+                        margin-bottom: 10px;
+                        text-align: center;
+
+                        @include mq.mobSM {
+                            margin-bottom: 20px;
+                        }
+                        @include mq.tabLG {
+                            margin-bottom: 30px;
+                            text-align: start;
+                        }
+                        @include mq.deskXS {
+                            margin-bottom: 20px;
+                        }
+
+                        & a {
+                            transition: margin-left 0.4s;
+
+                            &:hover {
+                                margin-left: 20px;
+                                color: colors.$text-light-hover;
+                            }
+                        }
+                    }
+                            #click-to-copy {
+                                position: absolute;
+                                top: -36px;
+                                left: 175px;
+
+                                @include mq.mobSM {
+                                    top: -50px;
+                                    left: 188px;
+                                }
+                                @include mq.tabSM {
+                                    top: -48px;
+                                    left: 225px;
+                                }
+                                @include mq.tabLG {
+                                    top: -36px;
+                                    left: 70px;
+                                }
+                            }
+
+                    #copy {
+                        position: relative;
+                    }
+                            .copy-text {
+                                margin-bottom: 5px;
+                                text-align: center;
+
+                                @include mq.mobSM {
+                                    margin-bottom: 10px;
+                                }
+                                @include mq.tabLG {
+                                    text-align: start;
+                                }
+                            }
+                            .separator {
+                                background-color: colors.$text-light;
+                                height: 1px;
+                                margin-bottom: 12px;
+
+                                @include mq.tabLG {
+                                    width: 550px;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .assets {
+                                text-align: center;
+
+                                @include mq.tabLG {
+                                    width: 550px;
+                                    text-align: start;
+                                }
+                            }
+
+.balloon {
+    width: 60px;
+    height: 60px;
+    @include mixin.centeredX;
+    top: 11%;
+    transition: top 0.4s;
+
+    @include mq.tabSM {
+        transform: unset;
+        width: 120px;
+        height: 120px;
+        left: 84%;
+        top: 84%;
+    }
+    @include mq.tabLG {
+        left: 80%;
+        top: 86%;
+    }
+    @include mq.deskXS {
+        left: 88%;
+        top: 80%;
+    }
+    @include mq.deskSM {
+        top: 82%;
+    }
+    @include mq.deskXL {
+        left: 93%;
+        top: 86%;
+    }
+
+    &:hover {
+        top: 10%;
+
+        @include mq.tabSM {
+            top: 82%;
+        }
+        @include mq.tabLG {
+            top: 84%;
+        }
+        @include mq.deskXS {
+            top: 78%;
+        }
+        @include mq.deskSM {
+            top: 80%;
+        }
+        @include mq.deskXL {
+            top: 84%;
+        }
+    }
+
+    & img {
+        width: 60px;
+        height: auto;
+
+        @include mq.tabSM {
+            width: 120px;
+        }
+        @include mq.tabLG {
+            width: 140px;
+        }
+    }
+}
+
+

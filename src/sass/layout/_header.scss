@@ -1,0 +1,523 @@
+@use '../base/animations' as animation;
+@use '../base/colors' as colors;
+@use '../base/media-queries' as mq;
+@use '../base/mixins' as mixin;
+@use '../base/variables' as variable;
+
+
+
+header {
+    // height: 100vh;
+    min-height: 100svh;
+    // margin-top: -(variable.$nav-height-sm);
+    margin-bottom: 50px;
+    padding: variable.$nav-height-sm 30px 0 30px;
+
+    @include mq.deskLG {
+        margin-top: -(variable.$nav-height-lg);
+        padding: variable.$nav-height-lg 0 0 0;
+    }
+}
+
+
+
+// TITLES ............................................................
+.title-small,
+.title {
+    position: relative;
+    margin-bottom: 50px;
+}
+        .title-small {
+            width: 220px;
+            top: 40px;
+
+            @include mq.mobSM {
+                top: 50px;
+            }
+            @include mq.tabSM {
+                width: 470px;
+                top: 80px;
+                left: 40px;
+            }
+            @include mq.tabLG {
+                width: auto;
+                top: 210px;
+                left: 80px;
+            }
+            @include mq.deskXS {
+                top: 90px;
+            }
+            @include mq.deskSM {
+                left: 120px;
+            }
+            @include mq.deskLG {
+                top: 260px;
+            }
+            @include mq.deskXL {
+                top: 260px;
+                left: 270px;
+            }
+        }
+        .title {
+            width: 260px;
+            z-index: 4;
+
+            @include mq.mobSM {
+                top: 20px;
+            }
+            @include mq.tabSM {
+                width: 540px;
+                top: 60px;
+                left: 40px;
+            }
+            @include mq.tabLG {
+                width: auto;
+                top: 190px;
+                left: 80px;
+            }
+            @include mq.deskXS {
+                top: 70px;
+                width: 540px;
+            }
+            @include mq.deskSM {
+                left: 120px;
+            }
+            @include mq.deskMD {
+                width: auto;
+            }
+            @include mq.deskLG {
+                top: 260px;
+            }
+            @include mq.deskXL {
+                top: 260px;
+                left: 320px;
+            }
+        }
+        .scratch {
+            position: absolute;
+            left: -5px;
+
+            @include mq.tabSM {
+                left: 200px;
+            }
+            @include mq.tabLG {
+                left: 270px;
+            }
+            @include mq.deskLG {
+                left: 340px;
+            }
+
+            img {
+                width: 220px;
+                height: 10px;
+                transform: rotate(1deg);
+
+                @include mq.mobSM {
+                    width: 275px;
+                }
+                @include mq.tabLG {
+                    width: 340px;
+                }
+                @include mq.deskLG {
+                    width: 420px;
+                    height: 12px;
+                }
+            }
+        }
+
+
+
+// ILLUSTRATIONS ....................................................
+.title-photos {
+    position: relative;
+    width: auto;
+    height: 350px;
+    top: -10px;
+    left: 10px;
+
+    @include mq.mobSM {
+        top: 40px;
+        left: 40px;
+    }
+    @include mq.tabSM {
+        top: 140px;
+    }
+    @include mq.tabLG {
+        top: 380px;
+        left: 210px;
+    }
+    @include mq.deskXS {
+        top: -170px;
+        left: 560px;
+    }
+    @include mq.deskSM {
+        top: -110px;
+        left: 630px;
+    }
+    @include mq.deskMD {
+        top: -70px;
+        left: 800px;
+    }
+    @include mq.deskLG {
+        top: -70px;
+        left: 1100px;
+    }
+    @include mq.deskXL {
+        top: 10px;
+        left: 1540px;
+    }
+
+    > * {
+        position: absolute;
+    }
+}
+
+.under-photos  {
+    .up {
+        position: absolute;
+        width: 50px;
+        height: 150px;
+
+        @include mq.tabSM {
+            width: 150px;
+            height: 300px;
+        }
+        @include mq.deskLG {
+            width: 250px;
+            height: 500px;
+        }
+
+        img {
+            width: 90px;
+            height: auto;
+            @include mixin.centeredX;
+        
+            @include mq.tabSM {
+                width: 200px;
+            }
+            @include mq.deskLG {
+                width: 300px;
+            }
+        }
+    }       
+            .under-1 {
+                top: 50px;
+                left: 60px;
+                transform: rotate(336deg);
+
+                @include mq.tabSM {
+                    top: 6px;
+                    left: 145px;
+                }
+                @include mq.deskLG {
+                    top: -150px;
+                    left: -50px;
+                }
+            }
+            .under-2 {
+                top: 145px;
+                left: 220px;
+                transform: rotate(52deg);
+
+                @include mq.tabSM {
+                    top: 120px;
+                    left: 450px;
+                }
+                @include mq.deskLG {
+                    top: 102px;
+                    left: 450px;
+                }
+
+                img {
+                    width: 60px;
+
+                    @include mq.tabSM {
+                        width: 100px;
+                    }
+                    @include mq.deskLG {
+                        width: 160px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 30px;
+                        top: 18px;
+                        left: 26px;
+                        animation: sunglasses-mob 2s ease-in-out infinite;
+
+                        @include mq.tabSM {
+                            width: 50px;
+                            top: 35px;
+                            left: 77px;
+                        }
+                        @include mq.deskLG {
+                            width: 70px;
+                            top: 52px;
+                            left: 128px;
+                            animation: sunglasses-desk 2s ease-in-out infinite;
+                        }
+                    }
+                }
+            }
+            .under-3 {
+                top: 190px;
+                left: 60px;
+                transform: rotate(293deg);
+
+                @include mq.tabSM {
+                    top: 234px;
+                    left: 194px;
+                }
+                @include mq.deskLG {
+                    top: 243px;
+                    left: -2px;
+                }
+                
+                img {
+                    width: 40px;
+
+                    @include mq.tabSM {
+                        width: 85px;
+                    }
+                    @include mq.deskLG {
+                        width: 132px;
+                    }
+
+                }
+            }
+        }
+                
+.header-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: colors.$color-accent;
+    overflow: hidden;
+    top: 90px;
+    left: 50px;
+
+    @include mq.tabSM {
+        width: 360px;
+        height: 360px;
+        top: 70px;
+        left: 180px;
+    }
+    @include mq.deskLG {
+        width: 600px;
+        height: 600px;
+        top: 0;
+        left: 0;
+    }
+
+    img {
+        height: 90%;
+        width: auto;
+        position: absolute;
+        top: 50px;
+        left: 5px;
+        transform: rotate(8deg);
+
+        @include mq.tabSM {
+            top: 100px;
+            left: 10px;
+        }
+        @include mq.deskLG {
+            top: 140px;
+            left: 45px;
+        }
+    }
+}
+
+.over-photos {
+    .over {
+        width: 50px;
+        height: 150px;
+        position: absolute;
+
+        @include mq.tabSM {
+            width: 150px;
+            height: 250px;
+        }
+        @include mq.deskLG {
+            width: 250px;
+            height: 500px;
+        }
+
+        img {
+            width: 120px;
+            height: auto;
+            @include mixin.centeredX;
+    
+            @include mq.tabSM {
+                width: 200px;
+            }
+            @include mq.deskLG {
+                width: 350px;
+            }
+        }
+    }       
+    .over-1 {
+        top: 10px;
+        left: 144px;
+        transform: rotate(7deg);
+
+        @include mq.tabSM {
+            top: -62px;
+            left: 300px;
+        }
+        @include mq.deskLG {
+            top: -238px;
+            left: 196px;
+        }
+
+        img:nth-child(2) {
+            width: 38px;
+            top: -3px;
+            left: 40px;
+            animation: crown-mob 3s ease-in infinite;
+
+            @include mq.tabSM {
+                width: 50px;
+                top: 5px;
+                left: 99px;
+                animation: crown-tab 3s ease-in infinite;
+            }
+            @include mq.deskLG {
+                width: 100px;
+                top: 6px;
+                left: -120px;
+                animation: crown-desk 3s ease-in infinite;
+            }
+        }
+    }
+    .over-2 {
+        top: 114px;
+        left: 200px;
+        transform: rotate(14deg);
+
+        @include mq.tabSM {
+            top: 90px;
+            left: 392px;
+        }
+        @include mq.deskLG {
+            top: 36px;
+            left: 360px;
+        }
+
+        img {
+            width: 60px;
+
+            @include mq.tabSM {
+                width: 100px;
+            }
+            @include mq.deskLG {
+                width: 160px;
+            }
+        }
+    }
+    .over-3 {
+        top: 210px;
+        left: 190px;
+        transform: rotate(-20deg);
+
+        @include mq.tabSM {
+            top: 248px;
+            left: 382px;
+        }
+        @include mq.deskLG {
+            top: 260px;
+            left: 338px;
+        }
+
+        img {
+            width: 115px;
+
+            @include mq.tabSM {
+                width: 200px;
+            }
+            @include mq.deskLG {
+                width: 370px;
+            }
+        }
+    }
+    .over-4 {
+        top: 205px;
+        left: 115px;
+        transform: rotate(210deg);
+        animation: leaves-mob 2s ease-in-out infinite alternate;
+
+        @include mq.tabSM {
+            top: -62px;
+            left: 250px;
+            animation: leaves-tab 2s ease-in-out infinite alternate;
+        }
+        @include mq.deskLG {
+            top: 280px;
+            left: 172px;
+            animation: leaves-desk 2s ease-in-out infinite alternate;
+        }
+
+        img {
+            width: 90px;
+
+            @include mq.tabSM {
+                width: 180px;
+            }
+            @include mq.deskLG {
+                width: 300px;
+            }
+        }
+    }
+    .over-5 {
+        top: 140px;
+        left: 25px;
+        transform: rotate(-5deg);
+        animation: mobile 1s ease-in-out infinite;
+
+        @include mq.tabSM {
+            top: 200px;
+            left: 105px;
+        }
+        @include mq.deskLG {
+            top: 165px;
+            left: -115px;
+        }
+
+        img {
+            width: 35px;
+
+            @include mq.tabSM {
+                width: 50px;
+            }
+            @include mq.deskLG {
+                width: 90px;
+            }
+
+        }
+    }
+    .over-6 {
+        top: 125px;
+        left: 145px;
+        transform: rotate(2deg);
+
+        @include mq.tabSM {
+            top: 134px;
+            left: 300px;
+        }
+        @include mq.deskLG {
+            top: 76px;
+            left: 235px;
+            }
+
+        img {
+            width: 60px;
+
+            @include mq.tabSM {
+                width: 100px;
+            }
+            @include mq.deskLG {
+                width: 160px;
+            }
+        }
+    }
+}
+                

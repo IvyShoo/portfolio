@@ -1,0 +1,240 @@
+
+@use '../base/colors' as colors;
+@use '../base/media-queries' as mq;
+@use '../base/mixins' as mixin;
+@use '../base/variables' as variable;
+
+
+section {
+    position: relative;
+    margin-bottom: 60px;
+
+    @include mq.tabLG {
+        margin-bottom: 160px;
+    }
+    @include mq.deskLG {
+        padding: 20px 0 100px 0;
+        margin-bottom: 200px;
+    }
+}
+
+
+
+
+
+// ABOUT .......................................................
+#about {
+    padding: 0 20px;
+
+    @include mq.tabSM {
+        padding: 0 70px;
+    }
+    @include mq.tabLG {
+        padding: 0 100px;
+    }
+    @include mq.deskLG {
+        padding: 20px 0;
+    }
+
+    .text-sm {
+        padding: 20px 0px;
+        margin-bottom: 16px;
+    
+        @include mq.tabLG {
+            padding: 20px 120px 0 0;
+        }
+        @include mq.deskLG {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.skills {
+    @include mq.tabLG {
+        padding: 20px 0;
+    }
+}
+        .skill-pack {
+            margin-bottom: 20px;
+        }
+
+
+
+
+// PREVIOUS WORK ....................................................
+#work {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 95svh;
+
+    @include mq.tabLG {
+        margin-bottom: 95svh;
+    }
+    @include mq.deskLG {
+        margin-bottom: 92svh;
+        padding: 20px 0 100px 0;
+    }
+
+    .subtitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+        padding-right: 20px;
+    
+        @include mq.tabSM {
+            padding-right: 50px;
+        }
+        @include mq.deskLG {
+            margin-bottom: 100px;
+            padding-right: unset;
+        }
+    }
+}
+
+.project {
+    margin-bottom: 160px;
+    padding: 0 20px;
+
+    &:last-of-type {
+        margin-bottom: 100px;
+    }
+    @include mq.tabSM {
+        padding: 0 50px;
+    }
+    @include mq.deskLG {
+        padding: 0 20px;
+    }
+}
+        .project-title {
+            margin-bottom: 10px;
+        }
+        .project-text {
+            margin-bottom: 30px;
+        }
+        .project-grid {
+            display: grid;
+            gap: 1rem;
+            height: 856px;
+            margin-bottom: 30px;
+            transition: filter 0.4s;
+
+            @include mq.tabSM {
+                grid-template-columns: minmax(auto, 65%) minmax(auto, 35%);
+                grid-template-rows: minmax(auto, 50%) minmax(auto, 50%);
+                height: 500px;
+                margin-bottom: 30px;
+            }
+        }
+                .grid-col-span-2 {
+                    grid-column: span 2;
+                }
+                .grid-row-span-2 {
+                    grid-row: span 2;
+                }
+                .grid-img {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: variable.$border-radius;
+                    background-color: colors.$bg-low-opacity;
+
+                    img {
+                        height: 100%;
+                        width: auto;
+                        @include mixin.centered;
+                    }
+                }
+                        
+        .project-set {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            column-gap: 80px;
+            margin-bottom: 160px;
+            padding: 70px 0 40px 0;
+            background-color: colors.$bg-low-opacity;
+
+
+            @include mq.tabSM {
+                column-gap: 30px;
+            }
+            @include mq.deskXS {
+                flex-direction: row;
+            }
+            @include mq.deskLG {
+                flex-direction: row;
+            }
+        }
+                .project-mini {
+                    width: 240px;
+                    margin: 0 auto 60px auto;
+                    position: relative;
+                    border-radius: variable.$border-radius;
+                    padding: 0;
+
+                    @include mq.tabSM {
+                        width: 400px;
+                    }
+                    @include mq.deskXS {
+                        width: 360px;
+                        margin: unset;
+                    }
+                    @include mq.deskLG {
+                        width: 440px;
+                    }
+                }
+                .project-mini-img {
+                    position: relative;
+                    overflow: hidden;
+                    height: 400px;
+                    margin-bottom: 20px;
+                    border-radius: variable.$border-radius;
+                    transition: filter 0.4s;
+
+                    @include mq.tabSM {
+                        height: 460px;
+                    }
+                    @include mq.deskXS {
+                        height: 360px;
+                        margin-bottom: 40px;
+                    }
+                    @include mq.deskLG {
+                        height: 400px;
+                        margin-bottom: 40px;
+                    }
+
+                    img {
+                        height: 400px;
+                        width: auto;
+                        @include mixin.centered;
+                        border-radius: variable.$border-radius;
+
+                        @include mq.tabSM {
+                            height: 460px;
+                        }
+                        @include mq.deskXS {
+                            height: 360px;
+                        }
+                        @include mq.deskLG {
+                            height: 400px;
+                        }
+                    }
+                }
+                
+        .project-grid:has(~ .project-cta button:hover),
+        .project-mini-img:has(~ .project-cta button:hover) {
+            filter: grayscale(1);
+        }
+
+        iframe {
+            height: 250px;
+            width: 300px;
+            @include mixin.centered;
+        }
+
+
+
+
+
+
+
