@@ -2,7 +2,9 @@
 
 Single page website containing basic info and showcase of selected work
 
-![Portfolio Screen](portfolio-screen-2.png)
+[Live](https://ivyshoo.github.io/)
+
+<!-- ![Portfolio Screen](portfolio-screen-2.png) -->
 
 
 ---
