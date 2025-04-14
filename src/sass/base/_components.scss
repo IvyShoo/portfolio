@@ -207,9 +207,9 @@ nav {
     height: 12px;
     border-radius: 50%;
     background-color: colors.$color-accent;
-    margin-right: 20px;
     position: relative;
-    top: 22px;
+    top: 21px;
+    margin-right: 20px;
 
     @include mq.tabLG {
         width: 18px;
@@ -225,7 +225,12 @@ nav {
     @include mq.deskLG {
         top: 40px;
     }
-}        
+}   
+        .sbt-dot-1 {
+            @include mq.deskSM {
+                display: none;
+            }
+        }
 
 
 
@@ -257,8 +262,14 @@ button {
         .project-mini .project-cta {
             position: absolute;
             top: 350px;
-            left: 210px;
+            left: 265px;
 
+            @include mq.mobXS {
+                left: 280px;
+            }
+            @include mq.mobSM {
+                left: 300px;
+            }
             @include mq.tabSM {
                 top: 402px;
                 left: 350px;

@@ -48,151 +48,47 @@ let letterDot1 = gsap.timeline({
       //   markers: true
       }
     }); 
-            // MOB MIN - 360x800 .............................................
-            matchMedia.add("(min-width: 200px) and (max-width: 360px)", () => {
+            // MOBILE + TABLET + DESK 1366-> fly off .............................................
+            // mobiles ...........................................
+            matchMedia.add("(min-width: 200px) and (max-width: 767px)", () => {
                   letterDot1.fromTo('.ld-1', 
                         {x: 0, y: 0}, 
                         { ease: 'none', motionPath:
                               { path: [
                                     {x: '-60px', y: '200px'}, 
-                                    {x: '50px', y: '410px'}, 
-                                    {x: '-11px', y: '701px'},
+                                    {x: '50px', y: '300px'}, 
+                                    {x: '-200px', y: '600px'},
                               ]}
                         }, 
                   );
             });
-            // MOB XS - 375x812 ...............................................
-            matchMedia.add("(min-width: 361px) and (max-width: 375px)", () => {
+            //  tablets ............................................
+            matchMedia.add("(min-width: 768px) and (max-width: 1279px)", () => {
                   letterDot1.fromTo('.ld-1', 
                         {x: 0, y: 0}, 
                         { ease: 'none', motionPath:
                               { path: [
                                     {x: '-60px', y: '200px'}, 
-                                    {x: '50px', y: '410px'}, 
-                                    {x: '-6px', y: '712px'},
+                                    {x: '20px', y: '400px'}, 
+                                    {x: '-350px', y: '600px'},
                               ]}
                         }, 
                   );
-            });
-            // MOB XS - 390x844 ...............................................
-            matchMedia.add("(min-width: 376px) and (max-width: 390px)", () => {
+            }); 
+            // tablets LG + desk XS ......................................
+            matchMedia.add("(min-width: 1280px) and (max-width: 1366px)", () => {
                   letterDot1.fromTo('.ld-1', 
                         {x: 0, y: 0}, 
                         { ease: 'none', motionPath:
                               { path: [
-                                    {x: '-60px', y: '200px'}, 
-                                    {x: '50px', y: '410px'}, 
-                                    {x: '-6px', y: '744px'},
+                                    {x: '-60px', y: '-30px'}, 
+                                    // {x: '20px', y: '400px'}, 
+                                    {x: '-350px', y: '60px'},
                               ]}
                         }, 
                   );
             });
-                        // matchMedia.add("(max-width: 393px) and (min-height: 852px)", () => {
-                        //       letterDot1.fromTo('.ld-1', 
-                        //             {x: 0, y: 0}, 
-                        //             { ease: 'none', motionPath:
-                        //                   { path: [
-                        //                         {x: '-60px', y: '200px'}, 
-                        //                         {x: '50px', y: '410px'}, 
-                        //                         {x: '-6px', y: '752px'},
-                        //                   ]}
-                        //             }, 
-                        //       );
-                        // });
-                        // matchMedia.add("(max-width: 393px) and (min-height: 873px)", () => {
-                        //       letterDot1.fromTo('.ld-1', 
-                        //             {x: 0, y: 0}, 
-                        //             { ease: 'none', motionPath:
-                        //                   { path: [
-                        //                         {x: '-60px', y: '200px'}, 
-                        //                         {x: '50px', y: '410px'}, 
-                        //                         {x: '-6px', y: '772px'},
-                        //                   ]}
-                        //             }, 
-                        //       );
-                        // });
-
-            // MOB SM - 412x915, 414x896 ......................................
-            matchMedia.add("(min-width: 394px) and (max-width: 414px)", () => {
-                  letterDot1.fromTo('.ld-1', 
-                        {x: 0, y: 0}, 
-                        { ease: 'none', motionPath:
-                              { path: [
-                                    {x: '-60px', y: '200px'}, 
-                                    {x: '50px', y: '410px'}, 
-                                    {x: '-24px', y: '784px'},
-                              ]}
-                        }, 
-                  );
-            });
-
-            // TABLETS - PORTRAIT 768x1024, 810/820x1180, 1024x1366 ............
-            matchMedia.add("(min-width: 415px) and (max-width: 768px)", () => {
-                  letterDot1.fromTo('.ld-1', 
-                        {x: 0, y: 0}, 
-                        { ease: 'none', motionPath:
-                              { path: [
-                                    {x: '-80px', y: '200px'}, 
-                                    {x: '0px', y: '620px'}, 
-                                    {x: '-14px', y: '878px'},
-                              ]}
-                        }, 
-                  );
-            });
-            matchMedia.add("(min-width: 769px) and (max-width: 992px)", () => {
-                  letterDot1.fromTo('.ld-1', 
-                        {x: 0, y: 0}, 
-                        { ease: 'none', motionPath:
-                              { path: [
-                                    {x: '-100px', y: '200px'}, 
-                                    {x: '0px', y: '820px'}, 
-                                    {x: '-12px', y: '1034px'},
-                              ]}
-                        }, 
-                  );
-            });
-            matchMedia.add("(min-width: 993px) and (max-width: 1024px)", () => {
-                  letterDot1.fromTo('.ld-1', 
-                        {x: 0, y: 0}, 
-                        { ease: 'none', motionPath:
-                              { path: [
-                                    {x: '-100px', y: '200px'}, 
-                                    {x: '0px', y: '820px'}, 
-                                    {x: '-20px', y: '1074px'},
-                              ]}
-                        }, 
-                  );
-            });
-
-
-            // TABLETS - landscape 1024x576  ...................
-            // matchMedia.add("(min-width: 993px) and (max-width: 1200px)", () => {
-            //       letterDot1.fromTo('.ld-1', 
-            //             {x: 0, y: 0}, 
-            //             { ease: 'none', motionPath:
-            //                   { path: [
-            //                         {x: '-100px', y: '100px'}, 
-            //                         {x: '0px', y: '400px'}, 
-            //                         {x: '-24px', y: '615px'},
-            //                   ]}
-            //             }, 
-            //       );
-            // });
-
-
-            // DESK XS - 1280x720, 1366x768 ...................................
-            matchMedia.add("(min-width: 1025px) and (max-width: 1366px)", () => {
-                  letterDot1.fromTo('.ld-1', 
-                        {x: 0, y: 0}, 
-                        { ease: 'none', motionPath:
-                              { path: [
-                                    {x: '-100px', y: '100px'}, 
-                                    {x: '0px', y: '400px'}, 
-                                    {x: '-18px', y: '615px'},
-                              ]}
-                        }, 
-                  );
-            });
+            // DESKTOP -> connect to subtitle .............................................
             // DESK SM - 1440x900 .............................................
             matchMedia.add("(min-width: 1367px) and (max-width: 1440px)", () => {
                   letterDot1.fromTo('.ld-1', 

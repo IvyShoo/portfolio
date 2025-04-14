@@ -36,6 +36,11 @@ section {
         padding: 20px 0;
     }
 
+    .subtitle {
+        display: flex;
+        flex-direction: row;
+    }
+    
     .text-sm {
         padding: 20px 0px;
         margin-bottom: 16px;
@@ -143,36 +148,58 @@ section {
                         @include mixin.centered;
                     }
                 }
+                .img-special-1 img, 
+                .img-special-2 img,
+                .img-special-3 img {
+                    @include mixin.centeredY;
+                    left: 0;
+                }
+                        .img-special-2 img {
+                            left: -65%;
+
+                            @include mq.deskXS {
+                                @include mixin.centered;
+                            }
+                        }
+                        .img-special-3 img {
+                            left: -62%;
+
+                            @include mq.tabLG {
+                                @include mixin.centered;
+                            }
+                        }
+
                         
         .project-set {
             display: flex;
             justify-content: center;
             flex-direction: column;
             column-gap: 80px;
-            margin-bottom: 160px;
-            padding: 70px 0 40px 0;
+            margin-bottom: 120px;
+            padding: 30px 20px;
             background-color: colors.$bg-low-opacity;
-
 
             @include mq.tabSM {
                 column-gap: 30px;
             }
             @include mq.deskXS {
                 flex-direction: row;
+                padding: 70px 0 40px 0;
+                margin-bottom: 160px;
             }
             @include mq.deskLG {
                 flex-direction: row;
             }
         }
                 .project-mini {
-                    width: 240px;
-                    margin: 0 auto 60px auto;
+                    margin: 0 0 60px 0;
                     position: relative;
                     border-radius: variable.$border-radius;
                     padding: 0;
 
                     @include mq.tabSM {
                         width: 400px;
+                        margin: 0 auto 60px auto;
                     }
                     @include mq.deskXS {
                         width: 360px;
