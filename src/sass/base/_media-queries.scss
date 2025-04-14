@@ -13,8 +13,8 @@
         // Mobile SM (portrait) ................
         $screen-mob-sm: 412px;
 
-        // Mobile LG and Tablets SM (landscape)
-        $screen-mob-lg: 576px;
+        // Mobile LG and Tablets SM
+        // $screen-mob-lg: 576px;
 
         // Tablets SM (portrait) .....................
         $screen-tab-sm: 768px;
@@ -53,12 +53,6 @@
     }
  }
  
- @mixin mobLG {
-    @media (min-width: $screen-mob-lg) {
-        @content;
-    }
- }
- 
  @mixin tabSM {
     @media (min-width: $screen-tab-sm) {
         @content;
@@ -67,6 +61,12 @@
  
  @mixin tabLG {
     @media (min-width: $screen-tab-lg) {
+        @content;
+    }
+ }
+
+ @mixin mobLAND{
+    @media (min-width: $screen-tab-lg) and (orientation: landscape) {
         @content;
     }
  }

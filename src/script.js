@@ -74,16 +74,16 @@ let letterDot1 = gsap.timeline({
                               ]}
                         }, 
                   );
-            }); 
+            });
             // tablets LG + desk XS ......................................
             matchMedia.add("(min-width: 1280px) and (max-width: 1366px)", () => {
                   letterDot1.fromTo('.ld-1', 
                         {x: 0, y: 0}, 
                         { ease: 'none', motionPath:
                               { path: [
-                                    {x: '-60px', y: '-30px'}, 
-                                    // {x: '20px', y: '400px'}, 
-                                    {x: '-350px', y: '60px'},
+                                    {x: '-60px', y: '30px'}, 
+                                    {x: '20px', y: '400px'}, 
+                                    {x: '-350px', y: '350px'},
                               ]}
                         }, 
                   );

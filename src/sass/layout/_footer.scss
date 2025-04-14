@@ -54,6 +54,10 @@ footer {
                 @include mq.tabLG {
                     width: 500px;
                 }
+                        @include mq.mobLAND {
+                            top: 15%;
+                            left: 56%;
+                        }
                 @include mq.deskXS {
                     top: 15%;
                     left: 60%;
@@ -90,6 +94,10 @@ footer {
                     width: 380px;
                     height: 380px;
                 }
+                        @include mq.mobLAND {
+                            top: 15%;
+                            left: 44%;
+                        }
                 @include mq.deskXS {
                     top: 25%;
                     left: 45%;
@@ -208,6 +216,9 @@ footer {
                     left: unset;
                     transform: unset;
                 }
+                        @include mq.mobLAND {
+                            top: 58%;
+                        }
                 @include mq.deskXS {
                     top: 69%;
                 }
@@ -313,6 +324,10 @@ footer {
         left: 80%;
         top: 86%;
     }
+            @include mq.mobLAND {
+                left: 83%;
+                top: 74%;
+            }
     @include mq.deskXS {
         left: 88%;
         top: 80%;
@@ -334,6 +349,9 @@ footer {
         @include mq.tabLG {
             top: 84%;
         }
+                @include mq.mobLAND {
+                    top: 72%;
+                }
         @include mq.deskXS {
             top: 78%;
         }
