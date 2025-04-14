@@ -18,5 +18,5 @@ Single page website containing basic info and showcase of selected work
 
 * ~~Landscape orientation for some mobile devices~~
 
-* Accessibility checklist
+* ~~Accessibility checklist~~
 
