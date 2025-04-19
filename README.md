@@ -14,7 +14,7 @@ Single page website containing basic info and showcase of selected work
 
 * _Previous Work_ images: 
     * ~~Correct media queries~~
-    * Click-to-enlarge feature test
+    * ~~Click-to-enlarge feature test~~
 
 * ~~Landscape orientation for some mobile devices~~
 
