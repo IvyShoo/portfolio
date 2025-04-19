@@ -168,7 +168,6 @@ section {
                                 @include mixin.centered;
                             }
                         }
-
                         
         .project-set {
             display: flex;
@@ -286,16 +285,4 @@ section {
         .project-special:has(~ .project-cta button:hover) {
             filter: grayscale(1);
         }
-
-        iframe {
-            height: 250px;
-            width: 300px;
-            @include mixin.centered;
-        }
-
-
-
-
-
-
 

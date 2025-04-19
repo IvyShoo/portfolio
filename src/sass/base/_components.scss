@@ -80,7 +80,6 @@ nav {
             text-align: center;
         }
 
-
 .scroll-down {
     nav {
         transform: translate3d(0, -100%, 0);
@@ -284,3 +283,95 @@ button {
             }
         }
 
+
+
+
+// LIGHTBOX GALLERY
+.img-click {
+    cursor: pointer;
+}
+
+.lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: colors.$bg-low-opacity;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.4s ease-in;
+    z-index: 1001;
+    opacity: 0;
+
+    img {
+        @include mixin.centered;
+        height: auto;
+        width: 100vw;
+        box-shadow: 10px 10px 20px black;
+
+        @include mq.tabSM {
+            width: 700px;
+        }
+        @include mq.tabLG {
+            width: 800px;
+        }
+        @include mq.deskXS {
+            width: auto;
+            height: 550px;
+        }
+        @include mq.deskSM {
+            height: 600px;
+        }
+        @include mq.deskLG {
+            height: 700px;
+        }
+    }
+}
+        .hide {
+            display: none;
+        }
+
+.arrow {
+    font-size: 30px;
+    color: colors.$text-light;
+    position: fixed;
+    top: 50%;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+        color: colors.$text-light-hover;
+        transform: scale(1.5);
+    }
+}
+        .arrow-left {
+            left: 10px;
+
+            @include mq.deskMD {
+                left: 70px;
+            }
+            @include mq.deskLG {
+                left: 130px;
+            }
+            @include mq.deskXL {
+                left: 440px;
+            }
+        }
+        .arrow-right {
+            right: 10px;
+
+            @include mq.deskMD {
+                right: 70px;
+            }
+            @include mq.deskLG {
+                right: 130px;
+            }
+            @include mq.deskXL {
+                right: 440px;
+            }
+        }

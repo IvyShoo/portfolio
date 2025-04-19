@@ -35,7 +35,7 @@ AOS.init();
 
 
 // GSAP LETTER DOT SCROLL ANIMATION .................................................................
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, Flip);
 
 let matchMedia = gsap.matchMedia();
 
@@ -157,6 +157,159 @@ let letterDot1 = gsap.timeline({
 
 
 
+//  CLICK TO ENLARGE: IMG GALLERY
+const images = document.querySelectorAll('.img-click');
+const lightbox = document.querySelector('.lightbox');
+const imgMain = document.querySelector('.lightbox img');
+const arrowL = document.querySelector('.arrow-left');
+const arrowD = document.querySelector('.arrow-right');
+
+let imgIndex = 0;
+
+// opening lightbox
+images.forEach(img => {
+      img.addEventListener('click', e => {
+            imgMain.src = e.target.src;
+            imgIndex = [...images].indexOf(img);
+
+            lightbox.classList.toggle('hide');
+            setTimeout(() => {
+                  lightbox.style.opacity = "1";
+            }, 10);
+      });
+});
+
+
+// closing lightbox - outside
+window.addEventListener('click', e => {
+      if(e.target.classList.contains('lightbox')) {
+            
+            lightbox.classList.toggle('hide');
+            setTimeout(() => {
+                  lightbox.style.opacity = "1";
+            }, 300);
+      }
+});
+            // closing lightbox - inside
+            imgMain.addEventListener('click', () => {
+                  lightbox.classList.toggle('hide');
+                  setTimeout(() => {
+                        lightbox.style.opacity = "1";
+                  }, 300);
+
+            })
+
+// prev - next
+arrowL.addEventListener('click', () => {
+      imgIndex--;
+      if (imgIndex < 0) {
+            imgIndex = images.length -1;
+      }
+      imgMain.src = images[imgIndex].src;
+});
+arrowD.addEventListener('click', () => {
+      imgIndex++;
+      if (imgIndex > images.length -1) {
+            imgIndex = 0;
+      }
+      imgMain.src = images[imgIndex].src;
+});
+
+
+
+
+
+
+
+
+// 1. odabir svih click-imagea + event na njih -> array 1
+// 2. definition array 2 -> sve img full
+// 3. pairing indices from array 1 to indices in array 2
+//  4. event = toggle class hide za overlay i za img full
+//  5. next previous funcionality u 1 galeriji
+
+// const imgClick = document.querySelectorAll('.img-click');
+// const imgFull = document.querySelectorAll('.img-full');
+
+// console.log(imgClick);
+
+
+// const image = document.querySelector('.click-img');
+// const imageFull = document.querySelector('.img-full');
+// const overlay = document.getElementById('overlay');
+
+// image.forEach(item => {
+//       item.addEventListener('click', () => {
+        
+//             imageFull.classList.toggle('hide');
+//             overlay.classList.toggle('hide');
+//       })
+// })
+
+
+
+// var imgs = document.getElementsByClassName('myImg');
+// var modals= document.getElementsByClassName('myModal');
+// var contImgs = document.getElementsByClassName('img01');
+// var captions = document.getElementsByClassName('caption');
+
+// /* This is the keypoint: Put the related operations of zooming in on the image 
+// into a loop, then get each image element in turn to complete the zoom operation */
+
+// for (let i = 0; i <imgs.length; i++) {
+//     console.log('imgs.length'+imgs.length);
+
+//     var img=imgs[i];
+//     var modal=modals[i];
+//     var contImg=contImgs[i];
+//     var caption=captions[i];
+//     img.onclick = function () {
+//         console.log('111');
+//         modal.style.display = 'block';
+//         contImg.src = img.src
+//         console.log(contImg.src,'srccc');
+//         caption.innerHTML = img.alt
+//     }
+//     var closeBox = document.getElementsByClassName('close')[i];
+//     closeBox.onclick = function () {
+//         modal.style.display = 'none';
+//     }
+// }
+
+
+// const image = document.querySelector('.click-img');
+// const imageFull = document.querySelector('.img-full');
+// const overlay = document.getElementById('overlay');
+
+// image.addEventListener('click', () => {
+//       imageFull.classList.toggle('show');
+//       overlay.classList.toggle('hide'); 
+// });
+
+//             // click on self or overlay to close:
+//             imageFull.addEventListener('click', (event) => {
+//                   event.target.classList.toggle('show');
+//                   overlay.classList.toggle('hide');
+//             });
+//             overlay.addEventListener('click', (event) => {
+//                   event.target.classList.toggle('hide');
+//                   imageFull.classList.toggle('show');
+//             });
+
+
+            //  ne radi na 2.slici
+
+
+            // click on self to close:
+            // function hide(event) {
+            //       event.target.classList.toggle('show');
+            // }
+            
+            // imageFull.addEventListener('click', hide, false);
+
+
+
+
 
 // COPY TO CLIPBOARD ..............................................................
 const copyButton = document.querySelector('.btn-copy');
@@ -184,5 +337,6 @@ clickCopy.addEventListener('click', () => {
 
 
 // CURRENT YEAR .................................................................
-$('#year').text(new Date().getFullYear());
+// $('#year').text(new Date().getFullYear());
+document.getElementById('year').innerHTML = new Date().getFullYear();
 
