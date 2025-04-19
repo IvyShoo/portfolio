@@ -173,9 +173,9 @@ images.forEach(img => {
             imgIndex = [...images].indexOf(img);
 
             lightbox.classList.toggle('hide');
-            setTimeout(() => {
-                  lightbox.style.opacity = "1";
-            }, 10);
+            // setTimeout(() => {
+            //       lightbox.style.opacity = "1";
+            // }, 100);
       });
 });
 
@@ -185,17 +185,17 @@ window.addEventListener('click', e => {
       if(e.target.classList.contains('lightbox')) {
             
             lightbox.classList.toggle('hide');
-            setTimeout(() => {
-                  lightbox.style.opacity = "1";
-            }, 300);
+            // setTimeout(() => {
+            //       lightbox.style.opacity = "0";
+            // }, 300);
       }
 });
             // closing lightbox - inside
             imgMain.addEventListener('click', () => {
                   lightbox.classList.toggle('hide');
-                  setTimeout(() => {
-                        lightbox.style.opacity = "1";
-                  }, 300);
+                  // setTimeout(() => {
+                  //       lightbox.style.opacity = "0";
+                  // }, 300);
 
             })
 
@@ -216,96 +216,6 @@ arrowD.addEventListener('click', () => {
 });
 
 
-
-
-
-
-
-
-// 1. odabir svih click-imagea + event na njih -> array 1
-// 2. definition array 2 -> sve img full
-// 3. pairing indices from array 1 to indices in array 2
-//  4. event = toggle class hide za overlay i za img full
-//  5. next previous funcionality u 1 galeriji
-
-// const imgClick = document.querySelectorAll('.img-click');
-// const imgFull = document.querySelectorAll('.img-full');
-
-// console.log(imgClick);
-
-
-// const image = document.querySelector('.click-img');
-// const imageFull = document.querySelector('.img-full');
-// const overlay = document.getElementById('overlay');
-
-// image.forEach(item => {
-//       item.addEventListener('click', () => {
-        
-//             imageFull.classList.toggle('hide');
-//             overlay.classList.toggle('hide');
-//       })
-// })
-
-
-
-// var imgs = document.getElementsByClassName('myImg');
-// var modals= document.getElementsByClassName('myModal');
-// var contImgs = document.getElementsByClassName('img01');
-// var captions = document.getElementsByClassName('caption');
-
-// /* This is the keypoint: Put the related operations of zooming in on the image 
-// into a loop, then get each image element in turn to complete the zoom operation */
-
-// for (let i = 0; i <imgs.length; i++) {
-//     console.log('imgs.length'+imgs.length);
-
-//     var img=imgs[i];
-//     var modal=modals[i];
-//     var contImg=contImgs[i];
-//     var caption=captions[i];
-//     img.onclick = function () {
-//         console.log('111');
-//         modal.style.display = 'block';
-//         contImg.src = img.src
-//         console.log(contImg.src,'srccc');
-//         caption.innerHTML = img.alt
-//     }
-//     var closeBox = document.getElementsByClassName('close')[i];
-//     closeBox.onclick = function () {
-//         modal.style.display = 'none';
-//     }
-// }
-
-
-// const image = document.querySelector('.click-img');
-// const imageFull = document.querySelector('.img-full');
-// const overlay = document.getElementById('overlay');
-
-// image.addEventListener('click', () => {
-//       imageFull.classList.toggle('show');
-//       overlay.classList.toggle('hide'); 
-// });
-
-//             // click on self or overlay to close:
-//             imageFull.addEventListener('click', (event) => {
-//                   event.target.classList.toggle('show');
-//                   overlay.classList.toggle('hide');
-//             });
-//             overlay.addEventListener('click', (event) => {
-//                   event.target.classList.toggle('hide');
-//                   imageFull.classList.toggle('show');
-//             });
-
-
-            //  ne radi na 2.slici
-
-
-            // click on self to close:
-            // function hide(event) {
-            //       event.target.classList.toggle('show');
-            // }
-            
-            // imageFull.addEventListener('click', hide, false);
 
 
 
