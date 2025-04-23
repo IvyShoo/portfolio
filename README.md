@@ -12,7 +12,7 @@ Single page website containing basic info and showcase of selected work
 
 * ~~Fix animated dot scroll-positions (_Header_, _About_)~~
 
-* _Previous Work_ images: 
+* ~~_Previous Work_ images:~~ 
     * ~~Correct media queries~~
     * ~~Click-to-enlarge feature test~~
 
