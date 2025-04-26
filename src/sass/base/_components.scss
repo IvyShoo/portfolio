@@ -44,9 +44,10 @@ nav {
 }
 .navigation-links {
     height: variable.$nav-height-sm;
-    padding: 0px 50px;
+    padding: 0px 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 0 0 30px 30px;
     width: 300px;
     margin: 0 auto;
@@ -64,20 +65,11 @@ nav {
         height: variable.$nav-height-lg;
     }
 }
-        .navi-link {
-            width: 100px;
-            margin-right: 10px;
-            text-align: end;
-
-            &:nth-child(3) {
-                text-align: start;
-                margin-left: 10px;
-            }
-        }
         .dot-sm {
             color: colors.$text-light;
             width: 10px;
             text-align: center;
+            margin: 0 10px;
         }
 
 .scroll-down {
